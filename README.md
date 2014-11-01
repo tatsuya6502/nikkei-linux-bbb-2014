@@ -53,7 +53,8 @@ nikkei-linux-bbb-2014/
 ------------------------------
 
 Copyright (c) 2014 Tatsuya Kawano
-Released under the MIT license / MITライセンスのもとで配布されています
+Released under the MIT license / MITライセンスのもとで配布されています。
+
 https://github.com/tatsuya6502/nikkei-linux-bbb-2014/blob/master/LICENSE
 https://github.com/tatsuya6502/nikkei-linux-bbb/2014/blob/master/LICENSE_ja
 
