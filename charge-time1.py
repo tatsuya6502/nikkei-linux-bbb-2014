@@ -1,10 +1,21 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
+# ------------------------------------------
+# コンデンサーの充電時間を計るプログラム
+#   日経Linux 2014年12月号掲載の
+#   オペアンプICとトランジスタによる測定回路向け
+# ------------------------------------------
+
 import Adafruit_BBIO.GPIO as GPIO
 import time, os
 import datetime as dt
 
+
+# 測定する間隔（秒）
+INTERVAL = 1.0
+
+# サンプル数（charge_time()をNUM_SAMPLES回実行し、平均値を表示する）
 NUM_SAMPLES = 5
 
 
@@ -55,10 +66,15 @@ setup("P9_11", "P9_13")
 
 while True:
     # charge_time()をNUM_SAMPLES回実行し、平均値を表示する
+    start = dt.datetime.now()
     charge_time_list = []
     for i in range(NUM_SAMPLES):
         ct = charge_time("P9_11", "P9_13")
         charge_time_list.append(ct)
     average = sum(charge_time_list) / NUM_SAMPLES
     print(average)
-    time.sleep(1.0 - 0.1 * NUM_SAMPLES)
+    end = dt.datetime.now()
+
+    # 次回の測定に向けて時間調整
+    sleep_length = INTERVAL - (end - start).microseconds / 1000000
+    time.sleep(sleep_length)
