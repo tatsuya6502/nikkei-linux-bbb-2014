@@ -3,7 +3,7 @@
 
 作成者：河野 達也 / Tatsuya Kawano
 
-最終更新：2014年11月1日
+最終更新：2014年11月16日
 
 目次
 ----
@@ -34,7 +34,9 @@ nikkei-linux-bbb-2014/
     README.md            # このファイル
     LICENSE              # オープンソースソフトウェアライセンス（英語）
     LICENSE_ja           # オープンソースソフトウェアライセンス（日本語）
+    charge-time-plot.r   # 2015年1月号で使用するRスクリプト
     charge-time1.py      # 2014年12月号で使用するPythonプログラム
+    charge-time2.py      # 2015年1月号で使用するPythonプログラム
 ```
 
 - プログラムの内容については、日経Linux 2014年12月号から2015年2月号「PCボード「Beagle Bone」で家庭菜園の水分や温度を監視」を参照してください。
@@ -46,7 +48,7 @@ nikkei-linux-bbb-2014/
 - プログラムの不具合を見つけられた場合には、issueトラッカーでご報告ください。日本語でかまいません。
   * https://github.com/tatsuya6502/nikkei-linux-bbb-2014/issues
 
-- 日経Linux掲載記事についてのご意見・お問い合わせは、日経Linux編集部までお願いします。
+- 日経Linux掲載記事についてのご意見やお問い合わせは、日経Linux編集部までお願いします。
 
 
 4. ソフトウェアライセンスについて
